@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:slideconnect/grid.dart';
 
-enum cell_contents { empty, red, blue, green, purple }
-
 void main() {
   runApp(const MyApp());
 }

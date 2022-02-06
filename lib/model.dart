@@ -1,8 +1,6 @@
 import 'dart:math';
-
+import 'package:slideconnect/grid.dart';
 import 'package:flutter/material.dart';
-
-enum cell_contents { empty, red, blue, green, purple }
 
 Random frand = Random(DateTime.now().millisecondsSinceEpoch);
 
