@@ -13,7 +13,7 @@ class GameModel extends ChangeNotifier {
 
   final List<cell_contents> _currentS = [];
 
-  void genRandomStart() {
+  List<cell_contents> genRandomStart() {
     List<cell_contents> choices = [blue, red, green, purple];
     int choicenum = 4;
     int emptySpot = frand.nextInt(26);
@@ -25,5 +25,10 @@ class GameModel extends ChangeNotifier {
         _currentS.add(choices[frand.nextInt(choicenum)]);
       }
     }
+
+    List<cell_contents> outstart = _currentS;
+    return outstart;
   }
 }
+
+GameModel game = GameModel();

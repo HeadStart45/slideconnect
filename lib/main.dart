@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:slideconnect/grid.dart';
+import 'package:slideconnect/model.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,11 +33,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _points = 0;
 
-  List<cell_contents> cells = [
-    cell_contents.blue,
-    cell_contents.empty,
-  ];
-
   void _incrementCounter() {
     setState(() {
       _points++;
@@ -60,6 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_points',
               style: Theme.of(context).textTheme.headline4,
             ),
+            GameGrid(cellsContain: game.genRandomStart())
           ],
         ),
       ),
